@@ -1,0 +1,26 @@
+#granulifera blueprint file
+#input setting
+popid: West # id of the population (no white space)
+nseq: 26 # number of sequences (2xn)
+#ANGSD Arguments and parameters for all analysis are located in .arg file
+L: 14425036 # Number of sites reported by angsd 
+whether_folded: true # whethr the SFS is folded (true or false)
+SFS: 51169.812061 31059.456815 21881.647562 17095.650730 14601.069466 12531.673947 11397.209027 10113.669805 9645.589315 9674.275205 9246.997564 9401.908320 7559.270171 # realSFS: singleton excluided, number of doubleton, etc. (separated by white space)
+#smallest_size_of_SFS_bin_used_for_estimation: 1 # default is 1; to ignore singletons, uncomment this line and change this number to 2
+#largest_size_of_SFS_bin_used_for_estimation: 8 # default is nseq/2 for folded SFS
+pct_training: 0.67 # percentage of sites for training
+nrand: 4 6 8 10 12 14 16 18 19 20 21 22 23 24 # number of random break points for each try (nseq-2,separated by white space)
+project_dir: West_realSFS # project directory
+stairway_plot_dir: stairway_plot_es # directory to the stairway plot files
+ninput: 200 # number of input files to be created for each estimation
+#random_seed: 6
+#output setting
+mu: 1e-9 # minimum value from Marquez et al. 2020 (Phyllobates)
+year_per_generation: 1 # assumed generation time (in years)
+#plot setting
+plot_title: Oophaga vicentei West# title of the plot
+xrange: 0.1,100000 # Time (1k year) range; format: xmin,xmax; "0,0" for default
+yrange: 0,0 # Ne (1k individual) range; format: xmin,xmax; "0,0" for default
+xspacing: 4 # X axis spacing
+yspacing: 4 # Y axis spacing
+fontsize: 12 # Font size
